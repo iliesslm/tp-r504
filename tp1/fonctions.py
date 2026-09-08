@@ -8,4 +8,16 @@ def puissance(a, b):
     if a == 0 and b < 0:
         raise Exception("0 cannot have a negative exponent")
 
-    return a ** b
+    resultat = 1
+
+    if b >= 0:
+        for i in range(b):
+            resultat = resultat * a
+
+        return resultat
+
+    else:
+        for i in range(-b):
+            resultat = resultat * a
+
+        return 1 / resultat
