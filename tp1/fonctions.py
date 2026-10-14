@@ -1,23 +1,18 @@
-def puissance(a, b):
-    if not type(a) is int:
-        raise TypeError("Only integers are allowed")
+def puissance (a, b):
+		is_int(a)
+		is_int(b)
+		result = 1
+		if b<0:
+				for i in range(-b):
+					result *= a
+				if a == 0 :
+						raise ValueError("0 à une puissance négative est impossible")
+				else : return (1/result)
 
-    if not type(b) is int:
-        raise TypeError("Only integers are allowed")
+		for i in range(b):
+			result *= a
+		return (result)
 
-    if a == 0 and b < 0:
-        raise Exception("0 cannot have a negative exponent")
-
-    resultat = 1
-
-    if b >= 0:
-        for i in range(b):
-            resultat = resultat * a
-
-        return resultat
-
-    else:
-        for i in range(-b):
-            resultat = resultat * a
-
-        return 1 / resultat
+def is_int (var):
+	if type(var) != int:
+			raise TypeError("Only integers are allowed")

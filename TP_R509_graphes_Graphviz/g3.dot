@@ -1,0 +1,18 @@
+graph {
+node [shape="star" style="filled" fillcolor="aqua"];
+edge [fontsize="20pt" color="red"];
+H--B [label="2"];
+H--G [label="14"];
+B--G [label="4"];
+B--D [label="9"];
+B--C [label="2"];
+B--A [label="1"];
+A--C [label="4"];
+G--D [label="1"];
+G--F [label="6"];
+D--C [label="1"];
+D--F [label="3"];
+D--E [label="1"];
+C--E [label="3"];
+F--E [label="1"];
+}

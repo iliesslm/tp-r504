@@ -1,0 +1,5 @@
+token.gh
+*.zip
+gh-artifacts.json
+liste-id.txt
+artifact_*/
