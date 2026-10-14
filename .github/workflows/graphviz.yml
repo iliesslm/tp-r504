@@ -9,16 +9,16 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: "TP_R509_graphes_Graphviz"
+        working-directory: TP_R509_graphes_Graphviz
     steps:
-      - name: Installation de graphviz
-        run: sudo apt-get update && sudo apt-get install -y graphviz
       - name: Check out repository code
         uses: actions/checkout@v4
+      - name: Installation de graphviz
+        run: sudo apt-get update && sudo apt-get install -y graphviz
       - name: Lancement graphviz
         run: ./run2.sh
       - name: upload du resultat
         uses: actions/upload-artifact@v4
         with:
           name: graphes-svg
-          path: "TP_R509_graphes_Graphviz/*.svg"
+          path: TP_R509_graphes_Graphviz/*.svg
